@@ -1,20 +1,38 @@
 import './App.css';
-import MyCarousel from './components/Carousel';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import WhyGive from './components/WhyGive';
-import StatsSection from './components/StatsSection';
+import Donate from './components/Donate';
+import MyCarousel from "./components/Carousel";
+import WhyGive from "./components/WhyGive";
+import StatsSection from "./components/StatsSection";
+import IndiaDonate  from './components/IndiaDonate';
+import  OtherCountriesDonate  from './components/OtherCountriesDonate';
+
+function Main() {
+  return (
+    <div>
+      <MyCarousel />
+      <WhyGive />
+      <hr  className='border-[1.5px] my-24 '/>
+      <StatsSection />
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header>
+    <BrowserRouter>
+      <div className="App">
         <Navbar />
-        <MyCarousel />
-        <WhyGive />
-        <hr className=' border-[1.5px] mx-12 my-24'/>
-        <StatsSection />
-      </header>
-    </div>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/donate/in/Annual-Gift-Programme" element={<IndiaDonate/>} />
+          <Route path="/donate/oc/Annual-Gift-Programme" element={<OtherCountriesDonate/>} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

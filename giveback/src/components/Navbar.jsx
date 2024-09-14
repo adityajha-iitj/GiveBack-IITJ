@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import {
   motion,
   AnimatePresence,
@@ -139,18 +140,21 @@ const Navbar = () => {
     >
       <div className="container mx-auto max-w-7xl">
         <div className="flex items-center justify-between">
-          <a href="/" onClick={() => setPathname("/")}>
+          <Link to="/" onClick={() => setPathname("/")}>
             <img
               src={`${process.env.PUBLIC_URL}/assets/IIT-Jodhpur-Logo.png`}
               alt="logo"
               className="h-16 md:h-24"
             />
-          </a>
+          </Link>
 
           <div className="hidden lg:flex ml-10">
             <div className="flex space-x-4 items-center">
               {NavItems.map((navItem) => (
-                <div key={navItem.id} className="relative h-full flex justify-center items-center">
+                <div
+                  key={navItem.id}
+                  className="relative h-full flex justify-center items-center"
+                >
                   <a
                     href={navItem.path}
                     className={`py-2 font-suse px-4 text-md font-medium ${
@@ -179,15 +183,14 @@ const Navbar = () => {
                   </AnimatePresence>
                 </div>
               ))}
-              <motion.a
-                href="#"
+              <motion.div
                 rel="noopener noreferrer"
-                className="border ml-4 border-primary bg-primary py-2 px-4 md:py-3 md:px-6 uppercase font-['Montserrat'] text-sm md:text-base tracking-[2px] text-white no-underline transition-all duration-200 hover:bg-white hover:text-primary"
+                className="border cursor-pointer ml-4 border-primary bg-primary py-2 px-4 md:py-3 md:px-6 uppercase font-['Montserrat'] text-sm md:text-base tracking-[2px] text-white no-underline transition-all duration-200 hover:bg-white hover:text-primary"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Donate
-              </motion.a>
+                <Link to="/donate">Donate</Link>
+              </motion.div>
             </div>
           </div>
 

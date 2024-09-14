@@ -1,12 +1,9 @@
 import React, { useEffect, useRef } from "react";
-import { motion, animate } from "framer-motion";
+import { motion, animate,inView } from "framer-motion";
+import { stats } from "../data/stats";
 
 const StatsSection = () => {
-  const stats = [
-    { number: 1300, label: "Projects", icon: "📚" },
-    { number: 11000, label: "Donors", icon: "💸" },
-    { number: 884, label: "Received", icon: "💰", suffix: " Cr" },
-  ];
+  
 
   return (
     <div className="flex justify-around bg-white p-8">
@@ -29,19 +26,21 @@ const AnimatedStat = ({ number, label, icon, suffix, delay }) => {
 
   useEffect(() => {
     const node = nodeRef.current;
-    const controls = animate(0, number, {
-      duration: 2,
-      delay,
-      onUpdate(value) {
-        node.textContent = `${Math.round(value)}${suffix}`;
-      },
+    inView(node, () => {
+      const controls = animate(0, number, {
+        duration: 2,
+        delay,
+        onUpdate(value) {
+          node.textContent = `${Math.round(value)}${suffix}`;
+        },
+      });
+      return () => controls.stop();
     });
-    return () => controls.stop();
   }, [number, delay, suffix]);
 
   return (
     <motion.div
-      className="flex flex-col items-center font-suse"
+      className="flex flex-col items-center font-suse stats"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
