@@ -7,6 +7,9 @@ import MyCarousel from "./components/Carousel";
 import WhyGive from "./components/WhyGive";
 import StatsSection from "./components/StatsSection";
 import IndiaDonate  from './components/IndiaDonate';
+import { FaqThree } from './components/Testimonials';
+import { Footer } from './components/Footer';
+import Helo from './components/Card';
 import  OtherCountriesDonate  from './components/OtherCountriesDonate';
 
 function Main() {
@@ -16,6 +19,13 @@ function Main() {
       <WhyGive />
       <hr  className='border-[1.5px] my-24 '/>
       <StatsSection />
+      <div className='flex justify-center items-center'>
+        <Helo/>
+        <Helo/>
+        <Helo/>
+      </div>
+      <FaqThree/>
+      <Footer/>
     </div>
   );
 }

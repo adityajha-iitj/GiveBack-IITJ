@@ -17,7 +17,7 @@ const BookATable = () => {
           <div className="flex justify-center border p-4 gap-12 w-fit rounded-lg">
             {/* India */}
             <div className="text-center w-80 shadow-custom h-96 flex flex-col justify-center items-center p-12 gap-6">
-              <img src={`${process.env.PUBLIC_URL}/assets/india-flag.jpg`} alt="India Flag" className="mx-auto" />
+              <img src={`${process.env.PUBLIC_URL}/assets/india.png`} alt="India Flag" className="mx-auto" />
               <div className="mt-6">
                 <Link
                   to="in/Annual-Gift-Programme"
@@ -27,12 +27,25 @@ const BookATable = () => {
                 </Link>
               </div>
             </div>
+          {/* USA */}
+          <div className="text-center w-80 shadow-custom h-96 flex flex-col justify-center items-center p-12 gap-6">
+              <img src={`${process.env.PUBLIC_URL}/assets/usan.png`} alt="India Flag" className="mx-auto" />
+              <div className="mt-6">
+                <Link
+                  to="in/Annual-Gift-Programme"
+                  className="flex px-24 py-2 w-full text-white bg-primary rounded hover:bg-primary-dark"
+                >
+                  USA
+                </Link>
+              </div>
+            </div>
+
 
             
 
             {/* Other Countries */}
             <div className="text-center w-80 shadow-custom h-96 flex flex-col justify-center items-center p-12 gap-6">
-              <img src={`${process.env.PUBLIC_URL}/assets/rest-world.jpg`} alt="Rest of World Flag" className="mx-auto" />
+              <img src={`${process.env.PUBLIC_URL}/assets/globe.jpg`} alt="Rest of World Flag" className="mx-auto" />
               <div className="mt-6">
                 <Link
                   to="oc/Annual-Gift-Programme"
