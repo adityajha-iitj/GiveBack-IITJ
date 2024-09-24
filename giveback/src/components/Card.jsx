@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Helo({heading}) {
+export default function Helo() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -21,7 +21,7 @@ export default function Helo({heading}) {
       }}
     >
       <img
-        src="https://images.unsplash.com/photo-1546961329-78bef0414d7c?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHVzZXJ8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60"
+        src={`${process.env.PUBLIC_URL}/assets/card.jpg`}
         alt="AirMax Pro"
         className={`z-0 h-full w-full rounded-md object-cover ${
           isHovered ? 'opacity-20' : 'opacity-100'
@@ -60,7 +60,7 @@ export default function Helo({heading}) {
         }`}
         style={{ paddingBottom: '2rem' }}
       >
-        <h1 className="text-lg font-bold text-white">{heading}</h1>
+        <h1 className="text-lg font-bold text-white">Annual Giving</h1>
       </div>
     </div>
     

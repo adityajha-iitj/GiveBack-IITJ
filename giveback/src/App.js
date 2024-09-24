@@ -19,7 +19,7 @@ function Main() {
       <WhyGive />
       <hr  className='border-[1.5px] my-24 '/>
       <StatsSection />
-      <div className='flex justify-center items-center'>
+      <div className='flex justify-center items-center flex-wrap'>
         <Helo/>
         <Helo/>
         <Helo/>

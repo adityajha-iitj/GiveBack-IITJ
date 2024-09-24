@@ -26,16 +26,16 @@ const AnimatedStat = ({ number, label, icon, suffix, delay }) => {
 
   useEffect(() => {
     const node = nodeRef.current;
-    inView(node, () => {
-      const controls = animate(0, number, {
-        duration: 2,
-        delay,
-        onUpdate(value) {
-          node.textContent = `${Math.round(value)}${suffix}`;
-        },
-      });
-      return () => controls.stop();
-    });
+    // inView(node, () => {
+    //   const controls = animate(0, number, {
+    //     duration: 2,
+    //     delay,
+    //     onUpdate(value) {
+    //       node.textContent = `${Math.round(value)}${suffix}`;
+    //     },
+    //   });
+    //   return () => controls.stop();
+    // });
   }, [number, delay, suffix]);
 
   return (
@@ -51,7 +51,7 @@ const AnimatedStat = ({ number, label, icon, suffix, delay }) => {
         <span
           className="text-7xl font-semibold text-primary mt-4"
           ref={nodeRef}
-        ></span>
+        >{number}</span>
         <span className="text-7xl font-semibold text-primary mt-4">+</span>
       </div>
       <p className="text-2xl text-gray-600">{label}</p>
