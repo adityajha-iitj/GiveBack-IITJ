@@ -22,10 +22,10 @@ const ChequeDraftForm = () => {
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="grid grid-cols-2 gap-4"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4"
       >
         {/* Left column */}
-        <div className="col-span-2 md:col-span-1">
+        <div className="md:pr-2">
           <input
             {...register("name", { required: true })}
             className="w-full p-2 border rounded"
@@ -86,7 +86,7 @@ const ChequeDraftForm = () => {
         </div>
 
         {/* Right column */}
-        <div className="col-span-2 md:col-span-1">
+        <div className="md:pl-2">
           <div className="bg-gray-100 p-4 rounded">
             <h3 className="font-bold mb-2">Cheque/Draft</h3>
             <p>Payable to 'Indian Institute of Technology Jodhpur'</p>

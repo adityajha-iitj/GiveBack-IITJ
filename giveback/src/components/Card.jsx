@@ -19,9 +19,10 @@ export default function Helo() {
           : '0px 4px 8px #910707', // Default shadow color
         transition: 'background 1s ease, box-shadow 0.5s ease'
       }}
+      id='ways-to-give'
     >
       <img
-        src={`${process.env.PUBLIC_URL}/assets/card.jpg`}
+        src={`${process.env.PUBLIC_URL}/assets/card1.jpg`}
         alt="AirMax Pro"
         className={`z-0 h-full w-full rounded-md object-cover ${
           isHovered ? 'opacity-20' : 'opacity-100'
@@ -44,12 +45,12 @@ export default function Helo() {
         style={{ paddingBottom: '2rem' }}
       >
         <p
-          className={`text-white text-center transition-opacity duration-1000 ${
+          className={`text-white text-center transition-opacity font-suse duration-1000 ${
             isHovered ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          Your contribution has been critical in the <br/>growth and eminence of your alma<br/> mater.
-          Every time you give back , you contribute towards the brighter future<br/> of IIT Jodhpur.
+          To continue on our journey of excellence,<br/>we rely on the generosity of our alumni,<br/> well wishers, 
+           philanthropists, community organizations, foundations, and corporations to support our research and educational programs<br/> of IIT Jodhpur.
         </p>
       </div>
 
@@ -60,7 +61,7 @@ export default function Helo() {
         }`}
         style={{ paddingBottom: '2rem' }}
       >
-        <h1 className="text-lg font-bold text-white">Annual Giving</h1>
+        <h1 className="text-lg font-bold text-white font-suse">Institute Development</h1>
       </div>
     </div>
     

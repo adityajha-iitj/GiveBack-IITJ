@@ -10,6 +10,8 @@ import IndiaDonate  from './components/IndiaDonate';
 import { FaqThree } from './components/Testimonials';
 import { Footer } from './components/Footer';
 import Helo from './components/Card';
+import Card1 from './components/Card1';
+import Card2 from './components/Card2';
 import  OtherCountriesDonate  from './components/OtherCountriesDonate';
 
 function Main() {
@@ -18,11 +20,11 @@ function Main() {
       <MyCarousel />
       <WhyGive />
       <hr  className='border-[1.5px] my-24 '/>
-      <StatsSection />
+      {/* <StatsSection /> */}
       <div className='flex justify-center items-center flex-wrap'>
         <Helo/>
-        <Helo/>
-        <Helo/>
+        <Card1/>
+        <Card2/>
       </div>
       <FaqThree/>
       <Footer/>

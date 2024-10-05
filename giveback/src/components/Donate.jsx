@@ -13,8 +13,8 @@ const BookATable = () => {
           <p className="text-gray-600">We express our gratitude for your generosity.</p>
         </div>
         {/* Donation Options */}
-        <div className="flex justify-center items-center">
-          <div className="flex justify-center border p-4 gap-12 w-fit rounded-lg">
+        <div className="flex flex-col md:flex-row justify-center items-center">
+          <div className="flex flex-col md:flex-row justify-center border p-4 gap-12 w-fit rounded-lg">
             {/* India */}
             <div className="text-center w-80 shadow-custom h-96 flex flex-col justify-center items-center p-12 gap-6">
               <img src={`${process.env.PUBLIC_URL}/assets/india.png`} alt="India Flag" className="mx-auto" />
@@ -27,9 +27,10 @@ const BookATable = () => {
                 </Link>
               </div>
             </div>
-          {/* USA */}
-          <div className="text-center w-80 shadow-custom h-96 flex flex-col justify-center items-center p-12 gap-6">
-              <img src={`${process.env.PUBLIC_URL}/assets/usan.png`} alt="India Flag" className="mx-auto" />
+
+            {/* USA */}
+            <div className="text-center w-80 shadow-custom h-96 flex flex-col justify-center items-center p-12 gap-6">
+              <img src={`${process.env.PUBLIC_URL}/assets/usan.png`} alt="USA Flag" className="mx-auto" />
               <div className="mt-6">
                 <Link
                   to="in/Annual-Gift-Programme"
@@ -39,9 +40,6 @@ const BookATable = () => {
                 </Link>
               </div>
             </div>
-
-
-            
 
             {/* Other Countries */}
             <div className="text-center w-80 shadow-custom h-96 flex flex-col justify-center items-center p-12 gap-6">

@@ -2,59 +2,97 @@ import React from 'react';
 
 export function Footer(){
   return (
-    <footer className="bg-[#910707] text-white py-0 ">
-      <div className="container mx-auto flex justify-between items-start py-6">
-        {/* Left Section */}
-        <div className="w-1/2">
-          <div className="flex items-center mb-4">
+    <footer className="bg-[#F7EFE5]">
+      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="md:flex md:justify-between">
+          <div className="mb-6 md:mb-0">
+            <a href="https://flowbite.com/" className="flex items-center">
             <img
-              src={`${process.env.PUBLIC_URL}/Screenshot (466).png`}
+              src={`${process.env.PUBLIC_URL}/apple-touch-icon.png`}
               alt="IIT  Logo"
               className="w-12 h-12 mr-3"
             />
+              <span className="self-center text-xl font-semibold whitespace-nowrap text-primary font-suse">
+                Indian Institute of Technology Jodhpur
+              </span>
+            </a>
+          </div>
+          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h1 className="text-lg font-bold">IIT JODHPUR</h1>
-              <p>Indian Institute of Technology Jodhpur</p>
+              <h2 className="mb-6 text-base font-semibold text-primary uppercase font-suse">
+                Useful Links
+              </h2>
+              <ul className="text-gray-500 font-medium font-suse">
+                <li className='mb-1'>
+                  <a href="#why-give" className="hover:underline">
+                    About
+                  </a>
+                </li>
+                <li className='mb-1'>
+                  <a
+                    href="#ways-to-give"
+                    className="hover:underline"
+                  >
+                    Ways to Give
+                  </a>
+                </li>
+                <li className='mb-1'>
+                  <a
+                    href="donate"
+                    className="hover:underline"
+                  >
+                    Donate
+                  </a>
+                </li>
+                <li className='mb-1'>
+                  <a
+                    href="#faq"
+                    className="hover:underline"
+                  >
+                    FAQs
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-6 text-base font-semibold text-primary uppercase font-suse">
+                Get In Touch
+              </h2>
+              <ul className="text-gray-500 font-medium font-suse">
+                <li className="mb-4">
+                    0291-280-1036
+                </li>
+                <li>
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=dora@iitj.ac.in&su=Subject&body=Message"
+                    className="hover:underline"
+                  >
+                    dora@iitj.ac.in
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-6 text-base font-semibold text-primary uppercase font-suse">
+                Dean of Resources and Alumni Office
+              </h2>
+              <ul className="text-gray-500 font-medium">
+                <li>
+                    IIT Jodhpur - 342037
+                </li>
+              </ul>
             </div>
           </div>
-
-          <div className="text-gray-300">
-            <p className="font-bold">GET IN TOUCH</p>
-            <p>+91-512-259-7289</p>
-            <p><a href="mailto:Dora_desk@iitj.ac.in" className="text-red-400 ">Dora_desk@iitj.ac.in</a></p>
-            <p>Dean of Resources and Alumni Office</p>
-            <p>Room no. 269, Faculty Building</p>
-            <p>IIT Jodhpur - 208016</p>
-          </div>
         </div>
-
-        {/* Right Section */}
-        <div className="w-1/4">
-          <ul className="text-gray-300 space-y-2 text-left">
-            <li className="text-lg font-bold">Useful Links</li>
-            <li><a href="#" className="hover:text-red-400">About</a></li>
-            <li><a href="#" className="hover:text-red-400">Resources</a></li>
-            <li><a href="#" className="hover:text-red-400">Time</a></li>
-            <li><a href="#" className="hover:text-red-400">Voices of Impact</a></li>
-            <li><a href="#" className="hover:text-red-400">FAQs</a></li>
-          </ul>
-
-          <button className="mt-6 bg-red-600 hover:bg-red-500 text-white py-2 px-4 rounded">
-            Donate Now
-          </button>
-        </div>
-      </div>
-
-      <div className="border-t border-white-700 pt-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <p className="text-gray-400">Copyright © IITJ 2024 All rights reserved.</p>
-          <ul className="flex space-x-4 text-gray-400">
-            <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-white">Terms & Conditions</a></li>
-          </ul>
+        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div className="sm:flex sm:items-center sm:justify-between">
+          <span className="text-sm text-gray-900 sm:text-center font-suse">
+            © 2024{' '}
+              Designed and Developed by 
+            Society of Alumni Affairs.
+          </span>
         </div>
       </div>
     </footer>
-    
   );
 };
