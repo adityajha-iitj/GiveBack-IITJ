@@ -244,7 +244,7 @@ const Navbar = () => {
                   </motion.div>
                 ))}
                 <motion.a
-                  href="#"
+                  href="/donate"
                   rel="noopener noreferrer"
                   className="border border-primary bg-primary py-2 px-4 md:py-3 md:px-6 uppercase font-['Montserrat'] text-sm md:text-base tracking-[2px] text-white no-underline transition-all duration-200 hover:bg-white hover:text-primary"
                   whileHover={{ scale: 1.05 }}
